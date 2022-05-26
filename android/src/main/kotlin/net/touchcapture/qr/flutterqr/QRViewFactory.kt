@@ -10,7 +10,7 @@ import io.flutter.plugin.platform.PlatformViewFactory
 class QRViewFactory(private val messenger: BinaryMessenger) :
         PlatformViewFactory(StandardMessageCodec.INSTANCE) {
 
-    override fun create(context: Context?, id: Int, args: Any?): PlatformView {
+    override fun create(context: Context?, viewId: Int, args: Any?): PlatformView {
         @Suppress("UNCHECKED_CAST")
         val params = args as HashMap<String, Any>
         return QRView(requireNotNull(context), messenger, viewId, params)
